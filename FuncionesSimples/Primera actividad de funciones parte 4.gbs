@@ -1,0 +1,30 @@
+//PRIMERA ACTIVIDAD
+// d
+program{
+    return (masDe5())
+ }
+
+function totalBolitasCeldaActual() {
+    /*          CONTRATO
+    Proposito: Sumar las cantidades de bolitas que hay en la celda actual.
+    Precondiciones: Ninguna
+    Tipo: Numerico
+    */
+    return (
+        nroBolitas(Rojo) +
+        nroBolitas(Azul) +
+        nroBolitas(Verde) +
+        nroBolitas(Negro)
+    )
+}
+
+function masDe5(){
+    /*      CONTRATO
+    Proposito: Retorna un valor Booleano al comparar la funcion TotalBolitasCeldaActual (Tipo Numerico)
+        con un valor tipo Numerico.
+        Retorna verdadero si el valor de la funcion es igual a 5.
+    Precondiciones: Ninguna.
+    Tipo: Booleano
+    */
+    return (totalBolitasCeldaActual() >= 5)
+}

@@ -1,0 +1,20 @@
+//PRIMERA ACTIVIDAD
+// f
+program{
+    return (not totalBolitasCeldaActual())
+ }
+
+function totalBolitasCeldaActual() {
+    /*          CONTRATO
+    Proposito: Retorna Falso si la celda actual le falta colores o esta vacia,
+        si hay al menos un color retorna falso.
+    Precondiciones: Ninguna
+    Tipo: Booleano
+    */
+    return (
+        not (nroBolitas(Rojo) > 0) ||
+        not (nroBolitas(Azul) > 0) ||
+        not (nroBolitas(Verde) > 0) ||
+        not (nroBolitas(Negro) > 0)
+    )
+}
