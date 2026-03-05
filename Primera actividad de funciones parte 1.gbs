@@ -1,0 +1,20 @@
+//PRIMERA ACTIVIDAD
+// A
+program{
+    return(totalBolitasCeldaActual())
+ }
+
+function totalBolitasCeldaActual() {
+/*          CONTRATO
+Proposito: Sumar las cantidades de bolitas que hay en la celda actual.
+Precondiciones: Ninguna
+Tipo: Numerico
+*/
+return (
+    nroBolitas(Rojo) +
+    nroBolitas(Azul) +
+    nroBolitas(Verde) +
+    nroBolitas(Negro)
+    )
+}
+
