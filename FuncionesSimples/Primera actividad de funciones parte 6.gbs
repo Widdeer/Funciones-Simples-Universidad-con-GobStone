@@ -1,5 +1,5 @@
 //PRIMERA ACTIVIDAD
-// f
+// F
 program{
     return (totalBolitasCeldaActual())
  }
