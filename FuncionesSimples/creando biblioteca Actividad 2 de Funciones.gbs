@@ -1,0 +1,64 @@
+
+
+//Creando Funciones como biblioteca (Se va a usar en futuras actividades)
+
+function esCeldaVacía(){
+    /*  CONTRATO
+    
+    Proposito: *esCeldaVacia* devuelve Verdadero si la celda está vacia, de lo contrario devuelve Falso
+    
+    Precondiciones: Ninguna
+    
+    Tipo: Booleano
+    */
+    return(
+        (nroBolitas(Rojo) == 0) &&
+        (nroBolitas(Azul) == 0) &&
+        (nroBolitas(Negro) == 0) &&
+        (nroBolitas(Verde) == 0)
+    )
+}
+
+program{
+    return(tieneUnaDeCada())
+}
+
+function esCeldaConBolitas(){
+    /*  CONTRATO
+    
+    Proposito: *esCeldaConBolitas* devuelve Verdadero si la celda tiene al menos una bolita,
+    de lo contrario devuelve Falso
+    
+    Precondiciones: Ninguna
+    
+    Tipo: Booleano
+    */
+    return(
+        (nroBolitas(Rojo) >= 1) ||
+        (nroBolitas(Azul) >= 1) ||
+        (nroBolitas(Negro) >= 1) ||
+        (nroBolitas(Verde) >= 1)
+    )
+}
+
+function tieneUnaDeCada(){
+    /*  CONTRATO
+    
+    Proposito: *tieneUnaDeCada* devuelve Verdadero si la celda tiene una bolita de cada color,
+    de lo contrario devuelve Falso
+    
+    Precondiciones: Ninguna
+    
+    Tipo: Booleano
+    */
+    return(
+        (nroBolitas(Rojo) >= 1) &&
+        (nroBolitas(Azul) >= 1) &&
+        (nroBolitas(Negro) >= 1) &&
+        (nroBolitas(Verde) >= 1)
+    )
+}
+
+function cantidadDeSoldadosDe_(colorDelEjército){
+    
+}
