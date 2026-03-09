@@ -1,0 +1,27 @@
+type Persona is record{
+    field dni
+    field domicilio
+    field esDonante
+}
+
+
+function persona_ConDomicilioNuevoEn_(unaPersona, nuevoDom){
+    
+    return( Persona(
+        domicilio <- nuevoDom,
+        dni <- dni(unaPersona),
+        esDonante <- esDonante(unaPersona)
+        )
+    )
+    
+}
+
+program{
+    agustin := Persona(
+        domicilio <- "la matanza",
+        dni <- "47792501",
+        esDonante <- False
+        )
+
+    return(persona_ConDomicilioNuevoEn_(agustin, "hurlingham"))
+}

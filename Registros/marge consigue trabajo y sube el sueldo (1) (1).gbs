@@ -1,0 +1,67 @@
+type Persona is record{
+    field dni
+    field domicilio
+    field esDonante
+}
+
+type Puesto is variant{
+    case GestorDeProyecto{}
+    case LiderDeProyecto{}
+    case Desarrollador{}
+    case Operador{}
+}
+
+type Empleado is record{
+    field persona
+    field puesto
+    field sueldo
+}
+
+function empleado_ConSueldoActualizadoA_(unEmpleado, unSueldo){
+
+    return(
+        Empleado(
+            persona <- persona(unEmpleado),
+            puesto <- puesto(unEmpleado),
+            sueldo <- unSueldo
+        )
+    )
+}
+        
+function margeSimpson(){
+    return(
+        Persona(
+            domicilio <- "av. Evergrenn 123",
+            dni <- "7777777",
+            esDonante <- True
+            )
+        )
+}
+        
+function margeOperador(){
+    return(
+        Empleado(
+            persona <- margeSimpson(),
+            puesto <- Operador,
+            sueldo <- 5000
+            )
+        
+        )
+}
+
+function categoriaDelPuest_(unPuestoLaboral){
+    
+    return(
+        choose
+            4 when (unPuestoLaboral == GestorDeProyecto)
+            3 when (unPuestoLaboral == LiderDeProyecto)
+            2 when (unPuestoLaboral == Desarrollador)
+            1 otherwise
+    )
+}
+
+program{
+    return(
+        categoriaDelPuest_(puesto(margeOperador()))
+        )
+}

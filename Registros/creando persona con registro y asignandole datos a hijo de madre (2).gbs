@@ -1,0 +1,26 @@
+
+type Persona is record{
+    field dni
+    field domicilio
+    field esDonante
+}
+
+function personaNacidaDe_(madre){
+    return(
+        Persona(
+            dni <- "",
+            domicilio <- domicilio(madre),
+            esDonante <- False
+            )
+        )
+}
+
+
+program{
+    madre := Persona(
+        dni <- "47792501",
+        domicilio <- "eeuu",
+        esDonante <- False
+        )
+    return(personaNacidaDe_(madre))
+}

@@ -1,0 +1,35 @@
+//tipos de datos personalizados
+
+
+type DiaDeLaSemana is variant{
+    //..
+    case Lunes{}
+    case Martes{}
+    case Miercoles{}
+    case Jueves{}
+    case Viernes{}
+    case Sabado{}
+    case Domingo{}
+} 
+
+function esFinDeSemana(unDia){
+    /*
+        Proposito: indica si *unDia* corresponde
+        al FDS
+        
+        prec:ninguna
+        
+        parametros:*unDia* DiaDeLaSemana
+        
+        tipo: booleano
+    */
+    return(
+            unDia == Sabado ||
+            unDia == Domingo
+        )
+
+}
+
+program{
+    return(esFinDeSemana(Sabado))
+}

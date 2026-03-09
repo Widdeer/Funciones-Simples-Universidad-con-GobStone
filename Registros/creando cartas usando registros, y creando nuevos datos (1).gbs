@@ -1,0 +1,86 @@
+// Registro
+
+type PaloDeCarta is variant{
+    //..
+    case Oro{}
+    case Basto{}
+    case Espada{}
+    case Copa{}
+} 
+
+
+
+//A. Definicion
+
+    type CartaEspañola is record{
+        /*
+        Modelar una carta de la baraja española.
+        inv. de representacion
+            El campo numero esta comprendido entre 1 y 12
+    */
+        field palo  //PaloDeCarta
+        field numero //Numero
+    }
+    
+    
+    
+//B. Creamos un registro
+
+// function anchoDeBastos(){
+//     /*
+//         proposito: modelar el uno de bastos.
+        
+//         prec: ninguna
+        
+//         Tipo: Carta Española
+//     */
+    
+//     return (
+//             CartaEspañola(
+//                 palo <- Basto,
+//                 numero <- 1
+//                 )
+//         )
+    
+// }
+
+function anchoDePalo(unNumero, unPalo){
+    /*
+        proposito: modelar numeros de palos.
+        
+        prec: ninguna
+        
+        Tipo: Carta Española
+    */
+    
+    return (
+            CartaEspañola(
+                palo <- unPalo,
+                numero <- unNumero
+                )
+        )
+    
+}
+
+function mismaCartaQue_PeroDeBasto(unaCarta){
+    return (
+            anchoDePalo(numero(unaCarta), Basto
+            )
+            
+        )
+}
+
+function el4DeCopas(){
+    return(
+        anchoDePalo(4, Copa)
+        )
+}
+
+
+program{
+    return(
+        mismaCartaQue_PeroDeBasto(el4DeCopas())
+        )
+}
+
+//c. Modificacion de un registro
